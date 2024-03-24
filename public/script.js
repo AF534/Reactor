@@ -27,6 +27,8 @@ generateBtn.addEventListener("click", () => {
     preValue2 = qrValue2;
     preValue3 = qrValue3;
     preValue4 = qrValue4;
+    if(qrValue3 =="API2023") {
+    
     generateBtn.innerText = "Generating QR Code...";
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue} + ${qrValue1}+ ${qrValue2} + ${qrValue3} + ${qrValue4}`;
     qrImg.addEventListener("load", () => {
@@ -34,7 +36,9 @@ generateBtn.addEventListener("click", () => {
         generateBtn.innerText = "Generate QR Code";
         
         wrapper.style.height ="780px"; 
+    
     });
+}
    
    
   
